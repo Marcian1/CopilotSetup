@@ -16,7 +16,7 @@ description: Create or change Mendix domain model, microflows, pages, security a
 - `microflow.create`, `microflow.retrieve`, `microflow.object-operations`, `microflow.control-flow`, `microflow.validation`, `microflow.error-handling`
 - `page.create`, `page.widgets`, `page.datasource`, `page.action`, `page.alter`
 - `security.module-role`, `security.entity-access`, `security.page-access`, `security.microflow-access`
-- `navigation`, `workflow`, `integration`; errors: `errors`
+- `navigation.create`, `workflow.create`, `rest.consumed`, `rest.call`; errors: `errors`
 
 ## Minimal examples (verified with `mxcli check`)
 ```
