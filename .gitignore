@@ -1,0 +1,14 @@
+# Mendix build and local state (a project placed here for testing)
+deployment/
+.mendix-cache/
+theme-cache/
+node_modules/
+*.launch
+.classpath
+.project
+project-settings.user.json
+*.mpr.bak
+.mxcli/
+
+# scratch
+changes/*.tmp
