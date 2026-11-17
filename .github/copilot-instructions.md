@@ -19,6 +19,21 @@ a SQL-like text language. `mxcli` auto-detects the single `.mpr` in the working 
 
 mxcli is alpha quality: stay on a git branch, keep scripts small (one concern each), never batch unrelated changes.
 
+## Definition of done (do not say "done" before this)
+- `mxcli check` passes, the second `exec` changes nothing, and `mxcli lint` shows no new findings.
+- If a step fails, fix and rerun from step 2. After 3 failed attempts at the same error, stop and report the error and what you tried; do not improvise around it.
+- Final answer: what changed (a few lines), the check/lint result, anything left undone. Never claim a check passed that you did not run.
+- Before a large change, confirm `git status` is clean on a working branch; commit after each small script so a bad `exec` can be reverted.
+
+## Common mistakes (add a line each time MDL goes wrong)
+- Guessing syntax or keywords: run `mxcli syntax <topic>` instead.
+- `AS` in attribute declarations (`Name: String(200)` is correct).
+- `CREATE OR MODIFY` on an existing element: it drops anything the statement omits. Use `ALTER`.
+- Unqualified names: always `Module.Element`.
+- Missing `mdl 1;` header or a missing `;`.
+- Inventing roles or modules: look them up first.
+- Reading or editing `.mpr` / `mprcontents/` directly.
+
 ## Conventions
 - Names: entities PascalCase singular; microflows `ACT_` (button), `SUB_` (helper), `DS_` (data source), `VAL_` (validation); pages `Entity_Overview` / `Entity_NewEdit`.
 - Every persistent entity needs access rules and every page needs allowed roles.

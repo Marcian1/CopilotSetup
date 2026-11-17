@@ -1,7 +1,7 @@
-# A/B scorecard: lean (A) vs full-skills (B)
+# Scorecard
 
-Same project, same model, same prompts, a fresh chat for each row. Do A and B on two copies of the project
-(`apply.ps1 -Variant lean` and `apply.ps1 -Variant full-skills`) so nothing carries over.
+Run the same prompts on the same project copy for each setup, model or tool you compare (for example Copilot with different models,
+or before/after a change to the instructions), a fresh chat for each row, so nothing carries over.
 
 For each prompt record:
 - **Steps**: number of tool calls / terminal commands Copilot made (count them in the chat).
