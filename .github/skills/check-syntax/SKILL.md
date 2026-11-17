@@ -461,10 +461,7 @@ not close it.
 ### Before Writing MDL
 
 1. **Read the skill files:**
-   ```bash
-   cat .claude/skills/write-microflows/SKILL.md
-   cat .claude/skills/overview-pages/SKILL.md
-   ```
+   Read the `write-microflows` and `overview-pages` skills (only the line range you need).
 
 2. **Check help for specific syntax:**
    ```bash

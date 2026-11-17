@@ -241,7 +241,7 @@ an mxcli defect**:
 
 - **CE0463** "the definition of this widget has changed" — the project's stored widget
   instances are older than the widget packages now sitting beside them. This is not the
-  CE0463 that `.claude/skills/diagnose-ce0463.md` is about.
+  CE0463 that the CE0463 entry in `cheatsheet-errors` is about.
 - **CE6087** "design properties have been renamed in your theme" — a module references
   design properties an older Atlas spelled differently. Project-level: the location in the
   check output is empty, so the message alone does not say which module caused it.
@@ -407,7 +407,7 @@ and DataWidgets 3.5.0 → 3.11.3 (49 files) both reach **0 errors**.
 ## Worked example: the agent-editor stack on a vanilla app
 
 Run end-to-end on 2026-08-12 against a fresh `mxcli new … --version 11.12.1` app. The
-modules in `.claude/skills/mendix/agents` must all be present before any `create agent`
+modules in the `agents` skill must all be present before any `create agent`
 statement will build, and two of the dependencies are neither listed there nor modules.
 
 | Step | Content | Id | `--version` | Units | Errors after check |

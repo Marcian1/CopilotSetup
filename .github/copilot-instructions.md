@@ -39,17 +39,14 @@ mxcli is alpha quality: stay on a git branch, keep scripts small (one concern ea
 - Every persistent entity needs access rules and every page needs allowed roles.
 - Microflow variables start with `$`. Escape a single quote by doubling it.
 - Say which module you will touch before changing anything outside it.
-- Custom code (widgets, Java, JS) has its own rules in `.github/instructions/`; use the matching skill in `.github/skills/`.
 
-## Skill map (read ONE skill, then only the line range you need)
-Each skill opens with a "Find it fast" table of line ranges: read just that range. Syntax questions: `mxcli syntax <path>` first.
-- **Domain model:** mdl-entities, generate-domain-model, system-module, organize-project, project-settings
-- **Logic:** write-microflows, write-nanoflows, validation-microflows, patterns-crud, patterns-data-processing, write-rules, cheatsheet-variables, cheatsheet-errors, regular-expressions, scheduled-events-and-queues, write-workflows
-- **Queries:** xpath-constraints, write-oql-queries, verify-with-oql, json-structures-and-mappings
-- **Pages and UI:** create-page, overview-pages, master-detail-pages, alter-page, fragments, widgets, custom-widgets, create-custom-widget, bulk-widget-updates, write-layouts, theme-styling, atlas-design, manage-navigation, translations
-- **Security:** manage-security (read its System-module ceiling first)
-- **Integration:** rest-client, rest-call-from-json, mock-rest-apis, odata-data-sharing, business-events, database-connections, browse-integrations, catalog-search, java-actions, java-dependencies, javascript-actions, download-marketplace-content, agents
-- **Run, test, debug:** run-local, run-app, docker-workflow, test-microflows, test-app, debug-microflows, debug-bson, analyze-runtime, runtime-admin-api, demo-data
-- **Editing safely:** choose-edit-mode (alter vs create-or-modify), resolve-forward-references, check-syntax, live-edit-with-studio-pro
-- **Project and quality:** project-brain (read `docs/brain/project.md` first if it exists), assess-quality, graph-analysis, teamserver-git, upgrade-mendix-version, write-lint-rules
-- **Migration and demos:** assess-migration, migrate-design-prototype, migrate-k2-nintex, migrate-oracle-forms, bootstrap-app, record-narrated-demo, connect-rapidminer-graph
+## MDL and test files (these also load as scoped rules, repeated here in case they do not)
+- `.mdl` files: `mdl 1;` on line 1, each statement ends with `;`, qualified names, re-runnable (`IF NOT EXISTS`), `mxcli fmt` before showing.
+- `.test.mdl`: one `@test` per block, block ends with a line containing only `/`; validate with `mxcli check` first.
+
+## Skills
+Skills load on demand from their descriptions; read ONE, and only the line range you need (each opens with a "Find it fast" table). Syntax questions: `mxcli syntax <path>` first.
+- Start here: `mendix-explore` (understand), `mendix-write-mdl` (change loop), `mendix-review` (before commit). Security: read `manage-security`'s System-module ceiling first. Project notes: `docs/brain/project.md` via `project-brain` if it exists.
+- Browser tests: `test-app` for quick page checks, `mendix-e2e-strategy` for a full Playwright suite with self-supplied data. Logic tests: `test-microflows`.
+- Rare skills (migrations, bootstrap, narrated demos, BSON debugging, live Studio Pro edit) are not auto-loaded: invoke them by name with `/`.
+- Slash commands: `/explore /create-entity /create-crud /impact /review /fix-errors /add-tests /e2e-test`.

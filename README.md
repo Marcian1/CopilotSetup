@@ -5,18 +5,17 @@ A GitHub Copilot setup for Mendix projects edited through `mxcli`
 
 ```
 .github/
-  copilot-instructions.md          always loaded: rules, change loop, definition of done, common mistakes, skill map
-  instructions/*.instructions.md   loaded only for matching files (*.mdl, *.test.mdl, custom code)
-  skills/<~88 skills>/SKILL.md     loaded on demand (stock mxcli skills adapted for Copilot)
-  prompts/*.prompt.md              slash commands: /explore /create-entity /create-crud /impact /review /fix-errors /add-tests
+  copilot-instructions.md          always loaded: rules, change loop, definition of done, common mistakes, short skill pointers
+  instructions/*.instructions.md   loaded only for matching files (*.mdl, *.test.mdl)
+  skills/<~87 skills>/SKILL.md     loaded on demand; 8 of them are /slash commands (explore, create-entity, create-crud, impact, review, fix-errors, add-tests, e2e-test)
 apply.ps1                          copy this setup into any Mendix project
-scripts/build-full-skills.ps1      regenerates the skills from a project that ran `mxcli init`
+scripts/build-full-skills.ps1      refreshes the stock skills in place: -Source <project>/.claude/skills (custom skills are kept)
 SCORECARD.md                       test sheet
 ```
 
 The skills are the stock mxcli skills, adapted for Copilot: BOM removed (it can stop VS Code recognising a skill),
 `./mxcli` changed to `mxcli`, `sed -n` hints changed to "read only the line range", the Claude-only plugin left out,
-and a skill map added to the instructions. Re-run `scripts/build-full-skills.ps1` after `mxcli init --sync-skills`
+and a skill map added to the instructions. Re-run `scripts/build-full-skills.ps1 -Source <project>/.claude/skills` after `mxcli init --sync-skills`
 to refresh them. (An earlier lean variant with 13 condensed skills was replaced by this full set.)
 
 ## Use it
@@ -26,7 +25,7 @@ to refresh them. (An earlier lean variant with 13 condensed skills was replaced 
 3. Work on a git branch. mxcli prints an "alpha quality" warning on every run.
 
 Requires `mxcli` on PATH (`mxcli version`) and a GitHub Copilot plan with agent mode and skills support.
-Skills and prompt files need a recent VS Code; if `/explore` does not appear, update VS Code and Copilot Chat.
+Skills (and their /slash commands) need a recent VS Code; if `/explore` does not appear, update VS Code and Copilot Chat.
 
 
 ## Pick the model yourself

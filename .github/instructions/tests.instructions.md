@@ -7,4 +7,4 @@ Test file rules (mxcli test, alpha):
 - Test the microflow, not the page. Assert on returned values and committed data, not log text.
 - Flows using `[%CurrentUser%]` fail under test: pass the user as a parameter.
 - Do not `head()` a `retrieve ... first` result.
-- Full details: the `mendix-testing` skill.
+- Full details: the `test-microflows` skill.

@@ -515,7 +515,7 @@ call java action Module.RefreshData(Url = $Url) in queue Module.RefreshQueue;
 **microflow with a `returns` clause** fails the build with CE7033 (`mxcli check`:
 MDL088), a queued **Java action must `returns void`** or it fails with CE7038. Rewriting a microflow that has a queued call must restate the
 `in queue` clause; a rewrite that omits it is refused rather than silently
-dropping the binding. See `.claude/skills/mendix/scheduled-events-and-queues`.
+dropping the binding. See the `scheduled-events-and-queues` skill.
 
 ### ❌ INCORRECT Syntax
 
@@ -605,9 +605,6 @@ Before executing a microflow script, verify:
 
 ## Related Documentation
 
-- [MDL Syntax Guide](../../docs/02-features/mdl-syntax.md)
-- [OQL Syntax Guide](../../docs/syntax-proposals/OQL_SYNTAX_GUIDE.md)
-- [Microflow Examples](../../examples/doctype-tests/microflow-examples.mdl)
 - [Mendix Microflow Documentation](https://docs.mendix.com/refguide/microflows/)
 
 ## Quick Reference

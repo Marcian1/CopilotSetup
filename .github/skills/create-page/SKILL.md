@@ -39,7 +39,7 @@ next door:
 
 For the widgets *this project actually has* — including any marketplace or custom
 ones — read the generated `widgets` skill instead
-(`.ai-context/skills/widgets/SKILL.md`).
+(the `widgets` skill).
 
 ## Overview
 Guide for writing CREATE PAGE statements in Mendix Definition Language (MDL).
@@ -610,7 +610,7 @@ pluggablewidget 'com.mendix.widget.web.image.Image' imgLogo (
 ```
 
 The project's own widgets are documented as a skill: read
-`.ai-context/skills/widgets/SKILL.md` (also at `.claude/skills/widgets/SKILL.md`)
+the `widgets` skill
 for the index, then the per-widget file for the one you are placing — it carries
 the full property table with enumeration values, nested object properties, child
 slots and object lists.

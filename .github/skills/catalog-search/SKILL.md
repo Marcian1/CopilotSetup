@@ -26,7 +26,7 @@ read only the line range of one section (see the table) rather than the whole fi
 
 Search and discover services registered in **Mendix Catalog** (catalog.mendix.com) programmatically.
 
-**⚠️ NOTE:** This is the **external Mendix Catalog service** (CLI: `mxcli catalog search`), NOT the **MDL CATALOG keyword** which queries local project metadata tables (`SELECT ... FROM CATALOG.entities`). See `.claude/skills/mendix/browse-integrations` for MDL CATALOG queries.
+**⚠️ NOTE:** This is the **external Mendix Catalog service** (CLI: `mxcli catalog search`), NOT the **MDL CATALOG keyword** which queries local project metadata tables (`SELECT ... FROM CATALOG.entities`). See the `browse-integrations` skill for MDL CATALOG queries.
 
 ## Authentication Required
 
@@ -184,10 +184,10 @@ See GitHub issue #213 for architecture discussion.
 - **Requires**: `REFRESH CATALOG` command (no auth needed)
 - **Data source**: Your local .mpr file
 
-See `.claude/skills/mendix/browse-integrations` for MDL CATALOG usage.
+See the `browse-integrations` skill for MDL CATALOG usage.
 
 ## Related
 
-- Platform authentication: `.claude/skills/mendix/platform-auth.md`
-- OData client creation: `.claude/skills/mendix/odata-data-sharing`
-- MDL CATALOG queries: `.claude/skills/mendix/browse-integrations`
+- Platform authentication: `mxcli auth login`
+- OData client creation: the `odata-data-sharing` skill
+- MDL CATALOG queries: the `browse-integrations` skill

@@ -528,6 +528,7 @@ mxcli playwright verify tests/ -p app.mpr --keep-open
 
 ## Related Skills
 
+- [mendix-e2e-strategy](../mendix-e2e-strategy/SKILL.md) - **full Playwright suite** with self-supplied, database-independent test data
 - [test-microflows](../test-microflows/SKILL.md) - **MDL microflow tests** (business logic, no browser needed)
 - [/run-app](../run-app/SKILL.md) - Build and start the Mendix app in Docker
 - [/docker-workflow](../docker-workflow/SKILL.md) - Full Docker workflow reference

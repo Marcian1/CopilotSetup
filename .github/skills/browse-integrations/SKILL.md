@@ -22,7 +22,7 @@ read only the line range of one section (see the table) rather than the whole fi
 
 This skill covers discovering external services, browsing cached contracts, and querying integration assets via the **MDL CATALOG** (local project metadata).
 
-**⚠️ NOTE:** This covers the **MDL CATALOG keyword** (`SELECT ... FROM CATALOG.entities`), NOT the **Mendix Catalog CLI** (`mxcli catalog search`). See `.claude/skills/mendix/catalog-search` for the external service registry.
+**⚠️ NOTE:** This covers the **MDL CATALOG keyword** (`SELECT ... FROM CATALOG.entities`), NOT the **Mendix Catalog CLI** (`mxcli catalog search`). See the `catalog-search` skill for the external service registry.
 
 ## When to Use This Skill
 
